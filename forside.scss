@@ -1,0 +1,262 @@
+/**Typografi: main font-family**/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+
+/**INSPIRATION OG FORSIDE STYLING**/
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color: snow;
+}
+
+/**Header: logo og firmanavn**/
+header{
+  width: 100%;
+  background-image: url("https://i.pinimg.com/736x/b7/fb/fb/b7fbfbc11b53003063948dd6628127c2--white-texture-templates-free.jpg");
+  top: 0;
+}
+
+.logo{
+  width: 30%;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.firma{
+  text-align: center;
+  font-family: "Josefin Slab";
+  margin-top: 10px;
+}
+
+.kurv{
+  width: 5%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/**Navigationsbar**/
+nav{
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+li{
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+li a{
+  color: black;
+  text-decoration: none;
+}
+
+.current{
+  text-shadow: 1px 1px grey;
+  text-decoration: underline;
+}
+
+/**Main: rubrik, brødtekst og billede**/
+.rubrik{
+  font-weight: bold;
+}
+
+.main{
+  padding: 10px 10px;
+  font-family: "Josefin Slab";
+  font-size: 1em;
+  text-align: justify;
+}
+
+.foto{
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+/**Footer: kontaktoplysninger og sociale medier**/
+footer{
+  background-image: url("https://i.pinimg.com/736x/b7/fb/fb/b7fbfbc11b53003063948dd6628127c2--white-texture-templates-free.jpg");
+  height: 90px;
+  margin-top: 20px;
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover{
+    color: #7a7a7a;
+  }
+
+  p{
+    font-size: 1.3em;
+    line-height: 10px;
+  }
+}
+
+.kontakt{
+  margin: 0;
+  font-size: 0.8em;
+  float: left;
+  padding-left: 5px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+}
+
+.social{
+  width: 35px;
+  float: right;
+  margin: 40px 5px 0 0;
+}
+
+/**Inspiration: Desktop Media Querie**/
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    #inspiration {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas:
+              "header header"
+              "gsec1 gsec1"
+              "gfoto1 gfoto1"
+              "gsec2 gsec2"
+              "Sec3 Foto2"
+              "Foto3 Sec4"
+              "Sec5 Foto4"
+              "Foto5 Sec6"
+              "Sec7 Foto6"
+              "footer footer";
+    }
+
+    li{
+      font-size: 1.6em;
+    }
+
+    .main{
+      font-size: 1.5em;
+    }
+
+    .foto{
+      margin-top: 20px;
+    }
+
+    header{
+      grid-area: header;
+    }
+
+    .Sec1{
+      grid-area: gsec1;
+    }
+
+    .Sec2{
+      grid-area: gsec2;
+    }
+
+    .Sec3{
+      grid-area: Sec3;
+    }
+
+    .Sec4{
+      grid-area: Sec4;
+    }
+
+    .Sec5{
+      grid-area: Sec5;
+    }
+
+    .Sec6{
+      grid-area: Sec6;
+    }
+
+    .Sec7{
+      grid-area: Sec7;
+    }
+
+    .Foto1{
+      grid-area: gfoto1;
+    }
+
+    footer{
+      grid-area: footer;
+      height: 130px;
+      width: 100%;
+    }
+
+    .kontakt{
+      font-size: 1em;
+    }
+
+    /**Logo fylder ikke for meget af skærmen på desktop**/
+    .logo{
+      width: 10%;
+    }
+
+    .social{
+      width: 5%;
+    }
+
+  }
+}
+
+/**Forside: Desktop Media Querie**/
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    #forside {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas:
+              "header header"
+              "gsec1 gsec1"
+              "gsec2 gfoto1"
+              "footer footer"
+    }
+
+    .main{
+      font-size: 1.5em;
+    }
+
+    header{
+      grid-area: header;
+    }
+
+    .sec1{
+      grid-area: gsec1;
+    }
+
+    .sec2{
+      grid-area: gsec2;
+    }
+
+    .foto1{
+      grid-area: gfoto1;
+    }
+
+    footer{
+      grid-area: footer;
+      height: 130px;
+      width: 100%;
+    }
+
+    .logo{
+      width: 10%;
+    }
+
+    .kontakt{
+      font-size: 1em;
+    }
+  }
+}

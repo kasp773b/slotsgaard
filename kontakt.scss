@@ -1,0 +1,216 @@
+/**Typografi: main font-family**/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+
+$primary-color: #ffffff;
+$fancy-font:'Josefin Slab', serif;
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color: snow;
+}
+
+/**Header: logo og firmanavn**/
+header{
+  width: 100%;
+  background-image: url("https://i.pinimg.com/736x/b7/fb/fb/b7fbfbc11b53003063948dd6628127c2--white-texture-templates-free.jpg");
+  top: 0;
+  margin-bottom: 10px;
+}
+
+.logo{
+  width: 30%;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.firma{
+  text-align: center;
+  font-family: $fancy-font;
+  margin-top: 10px;
+}
+
+/**Navigationsbar**/
+nav{
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+li{
+  font-family: $fancy-font;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+li a{
+  color: black;
+  text-decoration: none;
+}
+
+.current{
+  text-shadow: 1px 1px grey;
+  text-decoration: underline;
+}
+
+.kurv{
+  width: 5%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/**Main: overskrifter, brødtekst og billeder**/
+h1{
+  font-family: $fancy-font;
+}
+
+.overskrift{
+  margin-left: 10px;
+}
+
+p{
+  font-family: $fancy-font;
+  font-size: 1em;
+  text-align: justify;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.foto{
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+/**Footer: kontaktoplysninger og sociale medier**/
+footer{
+  background-image: url("https://i.pinimg.com/736x/b7/fb/fb/b7fbfbc11b53003063948dd6628127c2--white-texture-templates-free.jpg");
+  height: 90px;
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover{
+    color: #7a7a7a;
+  }
+
+  p{
+    font-size: 1.3em;
+    line-height: 10px;
+  }
+}
+
+.kontakt{
+  margin: 0;
+  font-size: 0.7em;
+  float: left;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+.social{
+  width: 35px;
+  float: right;
+  margin: 40px 5px 0 0;
+}
+
+/**Billeder skjult på mobile device: ekstra kontaktbilleder**/
+.kontakt-om-img2{
+  display: none;
+}
+.kontakt-om-img3{
+  display: none;
+}
+
+/**Desktop Media Querie**/
+@supports (grid-area: auto){
+  @media screen and (min-width: 600px){
+
+    .kontakt-om-img2{
+      display: block;
+    }
+
+    .kontakt-om-img3{
+      display: block;
+    }
+
+    body{
+
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-areas:
+              "header header header"
+              "Gsec-kontakt-om-img1 Gsec-kontakt-om-img2 Gsec-kontakt-om-img3"
+              "Gsec-kontakt-tekst Gsec-om-tekst Gsec-om-tekst"
+              "footer footer footer";
+    }
+
+    .tekst{
+      font-size: 1.5em;
+    }
+
+    li{
+      font-size: 1.6em;
+    }
+
+    header{
+      grid-area: header;
+    }
+
+    .kontakt-om-img1{
+      grid-area: Gsec-kontakt-om-img1;
+    }
+
+    .kontakt-om-img2{
+      grid-area: Gsec-kontakt-om-img2;
+    }
+
+    .kontakt-om-img3{
+      grid-area: Gsec-kontakt-om-img3;
+    }
+    .kontakt-tekst{
+      margin-left: 10px;
+      grid-area: Gsec-kontakt-tekst;
+    }
+
+    .om-tekst{
+      margin-left: 10px;
+      grid-area: Gsec-om-tekst;
+    }
+
+    footer{
+      grid-area: footer;
+      height: 130px;
+      width: 100%;
+    }
+
+    .kontakt{
+      font-size: 1em;
+    }
+
+    /**Logo fylder ikke for meget af skærmen på desktop**/
+    .logo{
+      width: 10%;
+    }
+
+    .social{
+      width: 5%;
+    }
+  }
+}

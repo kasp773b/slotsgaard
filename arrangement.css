@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/**Typografi: main font-family**/
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: snow;
+  margin: 0;
+  font-family: "Josefin Slab", serif, Serif; }
+
+/**Header: logo og firmanavn**/
+header {
+  width: 100%;
+  background-image: url("https://i.pinimg.com/736x/b7/fb/fb/b7fbfbc11b53003063948dd6628127c2--white-texture-templates-free.jpg");
+  top: 0;
+  margin-bottom: 10px; }
+
+.logo {
+  width: 30%;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.firma {
+  text-align: center;
+  font-family: "Josefin Slab", serif, Serif;
+  margin-top: 10px; }
+
+li a {
+  color: black;
+  text-decoration: none; }
+
+.current {
+  text-shadow: 1px 1px grey;
+  text-decoration: underline; }
+
+/**Navigationsbar**/
+nav {
+  padding-bottom: 5px; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around; }
+
+li {
+  font-family: "Josefin Slab", serif, Serif;
+  font-weight: bold;
+  font-size: 0.7em; }
+
+.kurv {
+  width: 5%;
+  position: absolute;
+  right: 10px;
+  top: 10px; }
+
+/**Main: br├©dtekst og billeder**/
+.text {
+  font-size: 1em;
+  margin: 10px;
+  text-align: justify; }
+
+.slot {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/**Footer: kontaktoplysninger og sociale medier**/
+footer {
+  background-image: url("https://i.pinimg.com/736x/b7/fb/fb/b7fbfbc11b53003063948dd6628127c2--white-texture-templates-free.jpg");
+  height: 90px; }
+  footer a {
+    text-decoration: none;
+    color: black; }
+  footer a:hover {
+    color: #7a7a7a; }
+  footer p {
+    font-size: 1.3em;
+    line-height: 10px; }
+
+.foot {
+  margin: 0;
+  font-size: 0.8em;
+  float: left;
+  padding-left: 5px;
+  font-weight: bold; }
+
+.social {
+  width: 35px;
+  float: right;
+  margin: 40px 5px 0 0; }
+
+/**Desktop Media Querie**/
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    body {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "head head" "gsec2 gsec1" "gsec3 gsec4" "gsec6 gsec5" "foot foot"; }
+
+    li {
+      font-size: 1.6em; }
+
+    .text {
+      font-size: 1.5em;
+      margin-top: 15px; }
+
+    header {
+      grid-area: head; }
+
+    .sec1 {
+      grid-area: gsec1; }
+
+    .sec2 {
+      grid-area: gsec2; }
+
+    .sec3 {
+      grid-area: gsec3; }
+
+    .sec4 {
+      grid-area: gsec4; }
+
+    .sec5 {
+      grid-area: gsec5; }
+
+    .sec6 {
+      grid-area: gsec6; }
+
+    footer {
+      grid-area: foot;
+      height: 130px;
+      margin-top: 15px;
+      width: 100%; }
+
+    /**Logo fylder ikke for meget af sk├ªrmen p├Ñ desktop**/
+    .logo {
+      width: 10%; }
+
+    .social {
+      width: 5%; }
+
+    .foot {
+      font-size: 1em; } } }
+
+/*# sourceMappingURL=arrangement.css.map */

@@ -1,0 +1,269 @@
+/**Typografi: main font-family**/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color: snow;
+}
+
+/**Header: logo og firmanavm**/
+header{
+  width: 100%;
+  background-image: url("https://i.pinimg.com/736x/b7/fb/fb/b7fbfbc11b53003063948dd6628127c2--white-texture-templates-free.jpg");
+  top: 0;
+}
+
+.logo{
+  width: 30%;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.firma{
+  text-align: center;
+  font-family: "Josefin Slab";
+  margin-top: 10px;
+}
+
+/**Navigationsbar**/
+nav{
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+li{
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+li a{
+  color: black;
+  text-decoration: none;
+}
+
+.current{
+  text-shadow: 1px 1px grey;
+  text-decoration: underline;
+}
+
+.kurv{
+  width: 5%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/**Knapper**/
+.button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1, .button2, .button3, .button4, .button5, .button6{
+  text-align: center;
+}
+
+/**Main: produktoplysninger og billeder**/
+.tekst{
+  font-family: "Josefin Slab";
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.foto{
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+/**Footer: kontaktoplysninger og sociale medier*/
+footer{
+  background-image: url("https://i.pinimg.com/736x/b7/fb/fb/b7fbfbc11b53003063948dd6628127c2--white-texture-templates-free.jpg");
+  height: 90px;
+  margin-top: 20px;
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover{
+    color: #7a7a7a;
+  }
+
+  p{
+    font-size: 1.3em;
+    line-height: 10px;
+  }
+}
+
+.kontakt{
+  margin: 0;
+  font-size: 0.8em;
+  float: left;
+  padding-left: 5px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+}
+
+.social{
+  width: 35px;
+  float: right;
+  margin: 40px 5px 0 0;
+}
+
+/**Desktop Media Querie**/
+@supports (grid-area: auto) {
+
+  @media screen and (min-width: 600px) {
+
+    @import url(//fonts.googleapis.com/css?family=Noto+Sans);
+    body {
+      display: grid;
+      margin: auto;
+      text-align: center;
+      font-family: "Noto+Sans", sans-serif;
+      grid-template-columns: 33.3% 33.3% 33.3%;
+      grid-template-areas:
+              "header header header"
+              "Sec1 Sec2 Sec3"
+              "text1 text2 text3"
+              "button1 button2 button3"
+              "Sec4 Sec5 Sec6"
+              "text4 text5 text6"
+              "button4 button5 button6"
+              "footer footer footer";
+    }
+
+    li{
+      font-size: 1.6em;
+    }
+
+    .kontakt{
+      font-size: 1em;
+    }
+
+    .tekst{
+      font-size: 1.5em;
+    }
+
+    /**Logo fylder ikke for meget af skærmen på desktop**/
+    .logo{
+      width: 10%;
+    }
+
+    .social{
+      width: 5%;
+    }
+
+    header {
+      grid-area: header;
+      margin-bottom: 10px;
+    }
+
+    .Sec1 {
+      grid-area: Sec1;
+    }
+
+    .Sec2 {
+      grid-area: Sec2;
+    }
+
+    .Sec3 {
+      grid-area: Sec3;
+    }
+
+    .text1{
+      grid-area: text1;
+    }
+
+    .text2{
+      grid-area: text2;
+    }
+
+    .text3{
+      grid-area: text3;
+    }
+
+    .button1{
+      grid-area: button1;
+    }
+
+    .button2{
+      grid-area: button2;
+    }
+
+    .button3{
+      grid-area: button3;
+    }
+
+    .Sec4{
+      grid-area: Sec4;
+    }
+
+    .Sec5{
+      grid-area: Sec5;
+    }
+
+    .Sec6{
+      grid-area: Sec6;
+    }
+
+    .text4{
+      grid-area: text4;
+    }
+
+    .text5{
+      grid-area: text5;
+    }
+
+    .text6{
+      grid-area: text6;
+    }
+
+    .button4{
+      grid-area: button4;
+    }
+
+    .button5{
+      grid-area: button5;
+    }
+
+    .button6{
+      grid-area: button6;
+    }
+
+    footer {
+      grid-area: footer;
+      height: 130px;
+      width: 100%;
+    }
+
+  }
+
+}
